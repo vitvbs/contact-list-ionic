@@ -1,0 +1,88 @@
+.container {
+    max-width: 400px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    .card {
+        margin-top: 60px;
+
+        .go-back {
+            position: relative;
+            background: none;
+            border: none;
+
+            &::before {
+                content: "";
+                position: absolute;
+                color: white;
+                width: 15px;
+                height: 15px;
+                border-top: 2px solid;
+                border-left: 2px solid;
+                transform: rotate(-45deg);
+            }
+        }
+
+        .contact-photo {
+            height: 105px;
+            width: 105px;
+            background-color: #6d6c94;
+            border-radius: 55px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+
+            img {
+                width: 80px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+ion-content {
+    --ion-background-color:#05071f;
+}
+form {
+    margin-top: 20px;
+    input {
+        display: inline-block;
+        width: 78%;
+        border-radius: 15px;
+        padding: 7px 15px;
+        border: 1px solid;
+        margin-left: 2%;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        background-color: transparent;
+        color: #6d6c94;
+        font-family: 'Titillium Web', sans-serif;
+    }
+    
+    label {
+        display: inline-block;
+        width: 20%;
+        color: white;
+        font-family: 'Titillium Web', sans-serif;
+    }
+}
+
+ion-buttons {
+    margin-top: 10px;
+    button {
+        background: transparent;
+        border: 2px solid #6d6c94;
+        border-radius: 15px;
+        color: white;
+        padding: 10px 15px;
+        width: 110px;
+        font-size: 15px;
+    
+        &.remove-contact {
+            border-color: #7d2e2e;
+        }
+    }
+}

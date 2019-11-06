@@ -1,0 +1,24 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="contact-list">
+  <div class="card">
+    <div class="container">
+      <div class="add-contact">
+        <button routerLink="/details" routerDirection="forward" (click)="addContact()"> + Contact </button>
+      </div>
+
+      <ul>
+        <li class="contact" *ngFor="let contact of contacts; let i = index">
+          <div class="contact-content" [routerLink]="['/details', contact.id]">
+            <div class="contact-photo">
+              <img src="{{ contact.picture }}">
+            </div>
+            <p class="contact-name">{{ contact.name }}</p>
+            <p class="contact-number"> {{ contact.phone }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ion-content>

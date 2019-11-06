@@ -1,0 +1,28 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="card">
+      <button class="go-back" (click)="goBack()"></button>
+      <div class="contact-photo">
+        <img src="{{ contactDetails.picture }}" alt="">
+      </div>
+      <form [formGroup]="contactForm">
+        <label>Nome:</label>
+        <input type="text" formControlName="name" placeholder="Name" [(ngModel)]="contactDetails.name" />
+        <label>Número:</label>
+        <input type="text" formControlName="phone" placeholder="Phone" [(ngModel)]="contactDetails.phone"  />
+        <label>E-mail:</label>
+        <input type="text" formControlName="email" placeholder="Email" [(ngModel)]="contactDetails.email"  />
+      </form>
+      <ion-buttons>
+        <button class="remove-contact" ion-button icon-only (click)="remove()">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="saveContact()" style="display: block; margin-left: auto;"> Confirmar
+        </button>
+      </ion-buttons>
+    </div>
+  </div>
+</ion-content>
